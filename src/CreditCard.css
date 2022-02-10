@@ -1,0 +1,47 @@
+.Card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 8px 16px;
+  max-width: 330px;
+  box-shadow: 0 8px 10px #01437d1a;
+}
+
+.Card__head {
+  margin-bottom: 12px;
+}
+
+.Card__title {
+  font-size: 12px;
+  color: #00827e;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.Card__number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.Card__number-mask {
+  font-size: 40px;
+}
+
+.Card__number-mask span {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.Card__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Card__block {
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
