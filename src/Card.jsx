@@ -1,13 +1,5 @@
 import "./CreditCard.css"
 
-// const props = {
-//   title: "Tarjeta de nómina",
-//   ccending: 4398,
-//   ccholder: "Ezequiel Rangel",
-//   ccdate: "08/2024",
-//   cctype: "mastercard",
-// }
-
 const images = {
   "amex": "./amex.png",
   "discover": "./discover.png",
@@ -16,6 +8,8 @@ const images = {
   "visa-electron": "./visa-electron.png",
   "mastercard": "./mastercard.png"
 };
+
+const numberMask = [1, 2, 3, 4];
 
 // 1. Crear un stateless component
 const Card = (props) => {
@@ -40,6 +34,9 @@ const Card = (props) => {
           <span>&bull;&bull;&bull;&bull;</span>
           <span>&bull;&bull;&bull;&bull;</span>
           <span>&bull;&bull;&bull;&bull;</span>
+          {/* {numberMask.map((item) => {
+            return <span key={item}>&bull;&bull;&bull;&bull;</span>
+          })} */}
         </span>
         <span>{ccending}</span>
       </div>
