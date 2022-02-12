@@ -1,5 +1,5 @@
 import "./App.css";
-import NewCard from "./NewCard";
+import CardPlaceholder from "./CardPlaceholder";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         <h1 className="App__title">Agregar método de pago</h1>
         <p className="App__copy">Llena el formulario para añadir un nuevo método de pago.</p>
         <div className="App__card-list">
-          <NewCard />
+          <CardPlaceholder />
         </div>
         <p className="App__small">
           <small>

@@ -2,12 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import AppForm from "./AppForm";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppForm />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
