@@ -1,5 +1,5 @@
 import "./App.css";
-import CardPlaceholder from "./CardPlaceholder";
+import CreditCard from './Card';
 
 function App() {
   return (
@@ -8,7 +8,13 @@ function App() {
         <h1 className="App__title">Mis métodos de pago</h1>
         <p className="App__copy">Aquí puedes encontrar todas tus tarjetas guardadas.</p>
         <div className="App__card-list">
-          <CardPlaceholder />
+          <CreditCard
+            ccending="4356"
+            ccexp="08/2024"
+            title="Tarjeta de nómina"
+            ccholder="Ezequiel Rangel"
+            cctype="mastercard"
+          />
         </div>
         <p className="App__small">
           <small>

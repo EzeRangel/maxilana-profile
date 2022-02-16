@@ -9,7 +9,7 @@ const images = {
   "mastercard": "./mastercard.png"
 };
 
-const numberMask = [1, 2, 3, 4];
+const numberMask = [1, 2, 3];
 
 // 1. Crear un stateless component
 const Card = (props) => {
@@ -31,12 +31,9 @@ const Card = (props) => {
       </div>
       <div className="Card__number">
         <span className="Card__number-mask">
-          <span>&bull;&bull;&bull;&bull;</span>
-          <span>&bull;&bull;&bull;&bull;</span>
-          <span>&bull;&bull;&bull;&bull;</span>
-          {/* {numberMask.map((item) => {
+          {numberMask.map((item) => {
             return <span key={item}>&bull;&bull;&bull;&bull;</span>
-          })} */}
+          })}
         </span>
         <span>{ccending}</span>
       </div>
