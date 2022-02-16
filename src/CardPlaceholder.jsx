@@ -1,10 +1,12 @@
 import "./CardPlaceholder.css";
 
-function CardPlaceholder(){
+function CardPlaceholder({ text }){
+  let defaultText = "Aquí habrá un componente para la tarjeta de crédito";
+
   return (
     <div className="CardPlaceholder">
       <small className="CardPlaceholder__copy">
-        Aquí habrá un componente para la tarjeta de crédito
+        { text !== undefined ? text : defaultText } 
       </small>
     </div>
   )

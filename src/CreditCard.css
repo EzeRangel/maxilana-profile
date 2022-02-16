@@ -1,14 +1,19 @@
 .Card {
+  box-sizing: border-box;
   background-color: #fff;
   border-radius: 10px;
   padding: 8px 16px;
-  max-width: 330px;
+  width: 360px;
   box-shadow: 0 8px 10px #01437d1a;
   margin-bottom: 12px;
 }
 
 .Card__head {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 12px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .Card__title {
@@ -16,6 +21,15 @@
   color: #00827e;
   margin: 0;
   text-transform: uppercase;
+}
+
+.Card__remove-btn {
+  background-color: #fff;
+  color: red;
+  font-size: 12px;
+  max-width: 30px;
+  padding: 2px;
+  text-align: center;
 }
 
 .Card__type {
