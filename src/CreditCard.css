@@ -18,6 +18,10 @@
   text-transform: uppercase;
 }
 
+.Card__type {
+  margin-bottom: 12px;
+}
+
 .Card__number {
   display: flex;
   flex-direction: row;
@@ -27,6 +31,22 @@
 
 .Card__number-mask {
   font-size: 40px;
+}
+
+.Card__number-hidden {
+  height: 40px;
+  padding: 5px 0;
+  width: 60%;
+  background-color: lightgray;
+}
+
+.Card__number-toggle {
+  font-size: 10px;
+  width: auto;
+  padding: 4px 8px;
+  background-color: #01437d;
+  color: #fff;
+  margin-left: 8px;
 }
 
 .Card__number-mask span {
