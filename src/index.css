@@ -14,12 +14,6 @@ body {
   color: #294285;
 }
 
-.wrapper {
-  max-width: 768px;
-  padding: 0 16px;
-  margin: 0 auto;
-}
-
 h1,
 h2,
 h3,
@@ -28,6 +22,7 @@ h5,
 h6 {
   font-family: "Montserrat";
   font-weight: 700;
+  margin-top: 0;
 }
 
 .button {
@@ -42,4 +37,18 @@ h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #01437d;
+}
+
+.wrapper {
+  max-width: 768px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px 0;
 }
