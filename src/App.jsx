@@ -1,3 +1,5 @@
+import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
+
 import "./App.css";
 import CreditCard from './Card';
 
@@ -16,13 +18,18 @@ function App() {
             cctype="mastercard"
           />
         </div>
-        <p className="App__small">
-          <small>
-            🔒 La información de la tarjeta se almacena encriptada,
-            <br />
-             para que ningún tercero pueda acceder a esta información.
-          </small>
-        </p>
+        <footer className="App__footer">
+          <p className="App__small">
+            <small>
+              🔒 La información de la tarjeta se almacena encriptada,
+              <br />
+               para que ningún tercero pueda acceder a esta información.
+            </small>
+          </p>
+          <span className="App__theme-btn">
+            <MdOutlineDarkMode />
+          </span>
+        </footer>
       </section>
     </div>
   );
