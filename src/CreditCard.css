@@ -47,6 +47,11 @@
   font-size: 40px;
 }
 
+.Card__number-mask span {
+  display: inline-block;
+  margin-right: 4px;
+}
+
 .Card__number-hidden {
   height: 40px;
   padding: 5px 0;
@@ -63,11 +68,6 @@
   margin-left: 8px;
 }
 
-.Card__number-mask span {
-  display: inline-block;
-  margin-right: 4px;
-}
-
 .Card__info {
   display: flex;
   flex-direction: row;
@@ -79,4 +79,17 @@
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.theme-dark .Card {
+  background-color: #3f3351;
+}
+
+.theme-dark .Card__title {
+  color: #e9a6a6;
+}
+
+.theme-dark .Card__number-toggle {
+  background-color: #864879;
+  color: #fff;
 }

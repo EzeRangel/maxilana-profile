@@ -9,3 +9,7 @@
   border: 1px dashed #01437d;
   padding: 16px;
 }
+
+.theme-dark .CardPlaceholder {
+  border: 1px dashed #864879;
+}
