@@ -1,5 +1,6 @@
-import { useState } from 'react';
 import "./CreditCard.css"
+
+import useToggle from '../../hooks/useToggle';
 
 const images = {
   "amex": "./amex.png",
@@ -14,11 +15,7 @@ const numberMask = [1, 2, 3];
 
 // 1. Crear un stateless component
 const Card = (props) => {
-  const [hidden, setHidden] = useState(false);
-
-  const handleClick = () => {
-    setHidden(!hidden);
-  }
+  const { hidden, updateToggle } = useToggle(false);
 
   // 3. Añadir props
   const { title = "", ccending = "", ccholder = "", ccexp = "", cctype = ""} = props;
@@ -51,7 +48,7 @@ const Card = (props) => {
           )
           : <span className="Card__number-hidden" />
         }
-        <button onClick={handleClick} className="button Card__number-toggle">
+        <button onClick={updateToggle} className="button Card__number-toggle">
           {
             hidden === false ? "Ocultar" : "Mostrar"
           }
