@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import "./CreditCard.css"
 
 const images = {
@@ -13,6 +14,12 @@ const numberMask = [1, 2, 3];
 
 // 1. Crear un stateless component
 const Card = (props) => {
+  const [hidden, setHidden] = useState(false);
+
+  const handleClick = () => {
+    setHidden(!hidden);
+  }
+
   // 3. Añadir props
   const { title = "", ccending = "", ccholder = "", ccexp = "", cctype = ""} = props;
 
@@ -30,12 +37,25 @@ const Card = (props) => {
         />
       </div>
       <div className="Card__number">
-        <span className="Card__number-mask">
-          {numberMask.map((item) => {
-            return <span key={item}>&bull;&bull;&bull;&bull;</span>
-          })}
-        </span>
-        <span>{ccending}</span>
+        {
+          hidden === false
+          ? (
+            <>
+              <span className="Card__number-mask">
+                {numberMask.map((item) => {
+                  return <span key={item}>&bull;&bull;&bull;&bull;</span>
+                })}
+              </span>
+              <span>{ccending}</span>
+            </>
+          )
+          : <span className="Card__number-hidden" />
+        }
+        <button onClick={handleClick} className="button Card__number-toggle">
+          {
+            hidden === false ? "Ocultar" : "Mostrar"
+          }
+        </button>
       </div>
       <div className="Card__info">
         <div className="Card__block">
