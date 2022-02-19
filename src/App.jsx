@@ -1,11 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 
 import "./App.css";
 import api from './utils/fakeAPI';
+import { ThemeContext } from './ThemeProvider';
 import { Menu, Card, Placeholder } from './components';
 
 function App() {
+  const ctx = useContext(ThemeContext);
+
   const [loading, setLoading] = useState(false);
   const [cardlist, setCardList] = useState([]);
 
@@ -19,6 +22,14 @@ function App() {
       setLoading(false);
     })
   }, []);
+
+  useEffect(() => {
+    if(ctx.mode === "light"){
+      document.body.classList.remove("theme-dark");
+    } else {
+      document.body.classList.add("theme-dark");
+    }
+  }, [ctx]);
 
   return (
     <div className="wrapper">
@@ -54,8 +65,12 @@ function App() {
                  para que ningún tercero pueda acceder a esta información.
               </small>
             </p>
-            <span className="App__theme-btn">
-              <MdOutlineDarkMode />
+            <span className="App__theme-btn" onClick={() => { ctx.setTheme(); }}>
+              {
+                ctx.mode === "light"
+                  ? <MdOutlineLightMode />
+                  : <MdOutlineDarkMode />
+              }
             </span>
           </footer>
         </section>
