@@ -4,6 +4,7 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import "./App.css";
 import api from './utils/fakeAPI';
 import { ThemeContext } from './ThemeProvider';
+import ErrorBoundary from './ErrorBoundary';
 import { Menu, Card, Placeholder } from './components';
 
 function App() {
@@ -45,14 +46,15 @@ function App() {
             {
               cardlist.map((card) => {
                 return (
-                  <Card
-                    key={card.id}
-                    ccending={card.ccending}
-                    ccexp={card.date}
-                    title={card.title}
-                    ccholder={card.ccholder}
-                    cctype={card.cctype}
-                  />
+                  <ErrorBoundary key={card.id}>
+                    <Card
+                      ccending={card.ccending}
+                      ccexp={card.date}
+                      title={card.title}
+                      ccholder={card.ccholder}
+                      cctype={card.cctype}
+                    />
+                  </ErrorBoundary>
                 )
               })
             }

@@ -1,5 +1,5 @@
 import React from "react";
-import CardPlaceholder from "./CardPlaceholder";
+import { Placeholder } from "./components";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <CardPlaceholder
+        <Placeholder
           error={true}
           text="Ha ocurrido un error con alguna tarjeta."
         />

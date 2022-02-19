@@ -20,6 +20,10 @@ const Card = (props) => {
   // 3. Añadir props
   const { title = "", ccending = "", ccholder = "", ccexp = "", cctype = ""} = props;
 
+  if(ccending == "4242"){
+    throw new Error("No puedes usar este numero");
+  }
+
   return (
     <div className="Card">
       <header className="Card__head">
