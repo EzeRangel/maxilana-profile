@@ -40,10 +40,13 @@
   list-style: none;
 }
 
-.Menu__item {
+.Menu__item,
+.Menu__item > a {
+  color: inherit;
   padding: 4px;
   font-size: 12px;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .Menu__item:hover {

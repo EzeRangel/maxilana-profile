@@ -1,6 +1,7 @@
 import React from 'react';
-import "./CreditCard.css";
+
 import "./Form.css";
+import "../Card/CreditCard.css";
 
 const INITIAL_VALUES = {
   ccholder: "",

@@ -1,16 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import { ThemeProvider } from "./ThemeProvider";
 import reportWebVitals from "./reportWebVitals";
+import AppForm from "./AppForm";
 
 ReactDOM.render(
-  <ThemeProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </ThemeProvider>,
+  <BrowserRouter>
+    <ThemeProvider>
+      <React.StrictMode>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/agregar-tarjeta" element={<AppForm />} />
+        </Routes>
+      </React.StrictMode>
+    </ThemeProvider>
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

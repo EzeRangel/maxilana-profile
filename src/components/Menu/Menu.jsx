@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { MdOutlineFirstPage, MdOutlineLastPage } from 'react-icons/md';
 
 import "./Menu.css";
@@ -26,10 +27,14 @@ const Menu = () => {
       </header>
       <ul className="Menu__list">
         <li className="Menu__item">
-          Ver tarjetas
+          <Link to="/">
+            Ver tarjetas
+          </Link>
         </li>
         <li className="Menu__item">
-          Agregar tarjeta
+          <Link to="/agregar-tarjeta">
+            Agregar tarjeta
+          </Link>
         </li>
       </ul>
     </aside>
