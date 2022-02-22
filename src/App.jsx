@@ -49,7 +49,7 @@ function App() {
                   <ErrorBoundary key={card.id}>
                     <Card
                       ccending={card.ccending}
-                      ccexp={card.date}
+                      ccexp={card.ccdate}
                       title={card.title}
                       ccholder={card.ccholder}
                       cctype={card.cctype}
